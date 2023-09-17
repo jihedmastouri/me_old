@@ -1,0 +1,39 @@
+{
+  "links": [
+    {
+      "name": "Mail",
+      "url": "mailto:",
+      "image": "images/social/paper-plane-solid.svg"
+    },
+    {
+      "name": "twitter",
+      "url": "",
+      "image": "images/social/twitter.svg"
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/jihedmastouri",
+      "image": "images/social/github.svg"
+    },
+    {
+      "name": "linkedIn",
+      "url": "",
+      "image": "images/social/linkedin.svg"
+    },
+    {
+      "name": "Instagram",
+      "url": "",
+      "image": "images/social/instagram.svg"
+    },
+    {
+      "name": "Instagram Photography",
+      "url": "",
+      "image": "images/social/camera.svg"
+    },
+    {
+      "name": "Dev",
+      "url": "https://dev.to/jihedmastouri",
+      "image": "images/social/dev.svg"
+    }
+  ]
+}

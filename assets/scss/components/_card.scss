@@ -1,0 +1,29 @@
+%floating-card {
+  // Dimensions
+  height: fit-content;
+  min-width: fit-content;
+  // margin: 10% 5px 15px 5px;
+  padding: 15px;
+  // Design
+  color: var(--heading-color);
+  border-radius: 5px;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  @include breakptMax("medium") {
+    margin: 10px auto;
+    max-height: auto;
+    padding: 10px;
+  }
+  @include breakptMax("small") {
+    min-width: 50vw;
+  }
+
+  ol,
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      list-style: none;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<aside class="slideInFromLeft">
+  {{if or (in .Permalink "tags") (in .Permalink "categories") }}
+  <small>
+    <a href="/posts">
+      👈 Go Back to main blog </a>
+  </small>
+  {{ end }}
+  <div class="allCatg">
+    <h4>Browse By Category: </h4>
+    <ul>
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+      <a href='{{ "categories/" | relLangURL }}{{ $name | urlize }}/'>
+        <li>
+          <span>
+            {{ $name }}
+          </span>
+        </li>
+      </a>
+      {{ end }}
+    </ul>
+  </div>
+  <div class="alltags">
+    <h4>Browse By Tag: </h4>
+    <ul>
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+      <a href='{{ "tags/" | relLangURL }}{{ $name | urlize }}/'>
+        <li>
+          <span>
+            #{{ $name }}
+          </span>
+        </li>
+      </a>
+      {{ end }}
+    </ul>
+  </div>
+</aside>

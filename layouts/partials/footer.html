@@ -1,0 +1,19 @@
+<footer class="footer">
+  {{ if .Site.Data.social.links }}
+  <div class="footer-social">
+    {{ range .Site.Data.social.links }}
+    <span class="social-icon social-icon-{{ .name | urlize }}">
+      <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener">
+        <img src="{{ .image | relURL }}" width="24" height="24" aria-hidden="true" />
+      </a>
+    </span>
+    {{ end }}
+  </div>
+  {{ end }}
+  <div>
+    <span>Content <br>
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+    </span>
+    <span>Website <br> <a href="https://github.com/jihedmastouri/me"> MIT License</a></span>
+  </div>
+</footer>

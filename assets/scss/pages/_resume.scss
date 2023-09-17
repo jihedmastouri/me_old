@@ -1,0 +1,110 @@
+.resume {
+  &__card {
+    @extend %floating-card;
+    min-width: 30%;
+  }
+  &__profile {
+    > img {
+      border-radius: 5px;
+      margin: auto 0;
+      @include breakptMax("medium") {
+        width: 50%;
+      }
+    }
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 50px;
+    margin-bottom: 10px;
+    @include breakptMax("medium") {
+      grid-template: "a" "b";
+    }
+  }
+  &__bio {
+    @extend %floating-card;
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    height: calc(100% - 32px);
+    margin: 0;
+  }
+  &__lang {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    height: 45px;
+    overflow: hidden;
+    img {
+      width: 32px;
+      aspect-ratio: 1;
+      opacity: 0.5;
+      object-fit: contain;
+      filter: var(--svg-color);
+      border-radius: 5px;
+      margin: 1px;
+      padding: 2px;
+    }
+    transition: transform 2s;
+    :hover {
+      scale: 1.125;
+    }
+  }
+  &__shields {
+    @extend %shields;
+    span {
+      color: var(--text-color);
+    }
+  }
+  &__eduaction {
+    margin: 2% 0;
+    width: 100%;
+    .timeline {
+      margin: 0 3%;
+      position: relative;
+      ::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: var(--text-color);
+        top: 0;
+        bottom: -10px;
+        left: 0;
+      }
+      div {
+        padding: 0 2rem;
+        margin-bottom: 10px;
+        position: relative;
+        ::after {
+          content: "";
+          position: absolute;
+          left: -14px;
+          margin: 0;
+          padding: 0;
+          width: 25px;
+          height: 25px;
+          background-color: var(--highlight-color);
+          border: 4px solid white;
+          border-radius: 50%;
+          z-index: 1;
+        }
+      }
+    }
+    h3 {
+      margin: 10px 0;
+      padding: 0;
+    }
+    h4 {
+      margin: 2px;
+      padding: 1px;
+    }
+    ul {
+      margin: 10px;
+      font-style: italic;
+      li {
+        list-style: inside;
+      }
+    }
+    span {
+      color: var(--highlight-color);
+    }
+  }
+}

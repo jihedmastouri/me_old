@@ -1,0 +1,30 @@
+@keyframes slideBottom {
+  0% {
+    transform: translateY(2%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-5%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.slideInFromBottom {
+  animation: 1 ease 0.5s slideBottom;
+}
+
+.slideInFromLeft {
+  animation: 1 ease 0.5s slideLeft;
+}

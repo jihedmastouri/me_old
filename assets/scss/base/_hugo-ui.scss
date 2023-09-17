@@ -1,0 +1,31 @@
+.footnotes {
+  ol {
+    list-style: decimal;
+    li {
+      list-style: decimal;
+    }
+  }
+}
+
+.highlight {
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  margin: 10px auto;
+  max-width: 50vw;
+  @include breakptMax("medium") {
+    max-width: 80vw;
+  }
+  .chroma {
+    overflow-x: scroll;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    @include breakptMax("medium") {
+      padding: 5px;
+      font-size: 10px;
+    }
+  }
+  // &:before{ }
+}

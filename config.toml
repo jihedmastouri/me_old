@@ -1,0 +1,49 @@
+baseURL = "https://localhost:1313/"
+languageCode = "en-us"
+theme = "winston"
+themesDir = "themes"
+title = "MJ's Homepage"
+paginate = 10
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses = true
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.55.0"
+
+[params]
+  twitter_handle = "jihed_mastouri"
+  showAuthorOnHomepage = true
+  showAuthorOnPosts = false
+  showPostsOnHomepage = false
+  addDot = true
+  addFrame = true
+
+  highlightColor = '#209CEE'
+  baseColor = "#ffffff"
+  baseOffsetColor = "#eaeaea"
+  headingColor = "#1c1b1d"
+  textColor = "#4e5157"
+  dotColor = "#209CEE"
+
+  dark_highlightColor = '#209Cff'
+  dark_baseColor = "#212133"
+  dark_baseOffsetColor = "#2f2f3f"
+  dark_headingColor = "#eeeeff"
+  dark_textColor = "#ccccee"
+  dark_dotColor = "#209CEE"
+
+[markup]
+ [markup.goldmark]
+  [markup.goldmark.renderer]
+   hardWraps = true
+   unsafe = true
+   xhtml = false
+ [markup.highlight]
+  tabWidth = 2
+  lineNos = true
+ [markup.tableOfContents]
+  endLevel= 3
+  startLevel= 2

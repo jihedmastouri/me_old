@@ -1,0 +1,33 @@
+.gallery {
+  &__header {
+    border: var(--base-offset-color) 2px dotted;
+    margin: 0 0 3% 0;
+    @media (prefers-color-scheme: light) {
+      box-shadow: 1px 10px 20px 0 rgba(12, 12, 32, 0.2);
+    }
+    @media (prefers-color-scheme: dark) {
+      box-shadow: 1px 10px 20px 0 rgba(50, 50, 150, 0.15);
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    h3 {
+      margin: 20px 20px;
+    }
+  }
+  &__pics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+      text-decoration: none;
+    }
+    img {
+      width: 360px;
+      object-fit: contain;
+    }
+  }
+}

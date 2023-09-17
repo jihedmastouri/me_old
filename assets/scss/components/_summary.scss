@@ -1,0 +1,21 @@
+.summary {
+  margin-bottom: 50px;
+  @include breakptMax("small") {
+    margin-bottom: 20px;
+  }
+  .summary-date {
+    font-weight: bold;
+    color: var(--heading-color);
+  }
+  .summary-title {
+    margin: 0;
+    width: 90%;
+  }
+  .summary-description {
+    width: 80%;
+    margin: 5px;
+    @include breakptMax("medium") {
+      width: 90%;
+    }
+  }
+}

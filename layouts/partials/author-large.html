@@ -1,0 +1,9 @@
+<div class="author author-large">
+	<img width="50px" class="author-image" src="{{ .Site.Data.author.image | relURL }}"
+		alt="{{ .Site.Data.author.name }}" />
+	<div style=" display: inline-flex; align-items: center; ">
+		<span class="author-name">{{ .Site.Data.author.name }} </span>
+    &nbsp; | &nbsp;
+		<span class="author-title"> {{ .Site.Data.author.title }}</span>
+	</div>
+</div>

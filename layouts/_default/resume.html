@@ -1,0 +1,72 @@
+{{ define "body_classes" }}page-default-single{{ end }} {{ define "main" }}
+<div class="intro">
+	<h1>
+		{{ .Title }}{{ if .Site.Params.addDot }}</span class="dot">.</span>{{ end }}
+	</h1>
+</div>
+<div class="resume">
+	<div class="resume__profile">
+		<img class="imgly  slideInFromLeft" alt="profile picture" src="/images/resume.jpg" />
+		<div class="resume__bio slideInFromBottom box-shadow">
+			<h2>About</h2>
+			<div class="resume__shields">
+				<span> Software Engineer </span>
+				<span> Web Developer </span>
+				<span> Student </span>
+			</div>
+			<div class="resume__lang">
+				<img width="35px" height="35px" alt="Python" title="Python" src="/images/lang/py.svg" />
+				<img width="35px" height="35px" alt="Node JS" title="Node JS" src="/images/lang/node.svg" />
+				<img width="35px" height="35px" alt="Better JS" title="Better JS" src="/images/lang/ts.svg" />
+				<img width="35px" height="35px" alt="Better Java" title="Better Java" src="/images/lang/csharp.svg" />
+				<img width="35px" height="35px" alt="/bin/bash" title="/bin/bash" src="/images/lang/bash.svg" />
+				<img width="35px" height="35px" alt="React" title="React" src="/images/lang/react.svg" />
+				<img width="35px" height="35px" alt="Bootstrap sucks" title="Tailwind CSS" src="/images/lang/tailwindcss.svg" />
+				<img width="35px" height="35px" alt="GNU/Linux" title="Linux" src="/images/lang/linux.svg" />
+				<img width="35px" height="35px" alt="Git" title="Git" src="/images/lang/git.svg" />
+				<img width="35px" height="35px" alt="Vim++" title="Neovim" src="/images/lang/neovim.svg" />
+				<img width="35px" height="35px" alt="docker" title="docker" src="/images/lang/docker.svg" />
+				<img width="35px" height="35px" alt="PostgreSQL" title="PostgreSQL" src="/images/lang/pgsql.svg" />
+				<img width="35px" height="35px" alt="I suck at SQL" title="MongoDB" src="/images/lang/mongo.svg" />
+			</div>
+		</div>
+	</div>
+	<div class="resume__eduaction">
+		<h2>Education</h2>
+		<div class="timeline">
+			<div>
+				<h3> <span> Engineering Degree </span>in Software Engineering</h3>
+				<h4>ESPRIT | Private Higher School of Engineering and Technology</h4>
+				<ul>
+					<li><b>20<span>21</span> - 20<span>23</span></b></li>
+					<li>Graduated With <span>Honors</span></li>
+					<li>Major: Internet & Web Technologies</li>
+				</ul>
+			</div>
+			<div>
+				<h3> <span> Master Of Research </span>in Computer Science</h3>
+				<h4>University of Tunis El Manar</h4>
+				<h4>ISI | Higher Institute of Computer Science</h4>
+				<ul>
+					<li><b>20<span>20</span> - 20<span>21</span></b></li>
+					<li>Discontinued After 1st Year</li>
+					<li>Major: <b>AI & ML</b> </li>
+				</ul>
+			</div>
+			<div>
+				<h3><span>Bachelor Degree </span>in Computer Science</h3>
+				<h4>University of Tunis El Manar</h4>
+				<h4>ISI | Higher Institute of Computer Science</h4>
+				<ul>
+					<li><b>20<span>17</span> - 20<span>20</span></b></li>
+					<li>Graduated With <span>Honors</span></li>
+					<li>Major: <b>Information Systems and Softwares</b></li>
+					<li>Activities and societies: Freeways, ATAST ISI Club, DMK ISI Club.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{ end }}
+

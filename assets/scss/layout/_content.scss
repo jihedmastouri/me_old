@@ -1,0 +1,133 @@
+.content {
+  @include breakptMin("medium") {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    main {
+      grid-column: 1;
+      grid-row: 1;
+      text-align: left;
+      width: 70%;
+    }
+    aside {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  &:only-child {
+    grid-template-columns: 1fr !important;
+    main {
+      width: 100%;
+    }
+  }
+
+  main {
+    padding: 0 10px;
+    margin: 0 auto;
+    p {
+      margin: 1.5rem 0;
+    }
+    ul,
+    ol,
+    li {
+      property: default;
+    }
+  }
+
+  ul {
+    list-style: disc;
+    li {
+      list-style: disc;
+    }
+  }
+  ol {
+    list-style: decimal;
+    li {
+      list-style: decimal;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+.datetime {
+  border-right: 3px #808080 groove;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  padding-right: 0.5rem;
+  text-align: right;
+  opacity: 0.6;
+  font-size: 12px;
+  @include breakptMax("small") {
+    font-size: 12px;
+  }
+}
+
+.meta {
+  border: 1px #808080 solid;
+  border-radius: 10px;
+  margin: 10px auto 20px;
+  padding: 5px;
+  width: 80%;
+  display: flex;
+  @include breakptMax("small") {
+    flex-direction: column;
+  }
+  justify-content: space-evenly;
+  opacity: 0.8;
+  font-style: italic;
+
+  #tags-list {
+    margin: 0;
+  }
+
+  img {
+    filter: var(--svg-color);
+    width: 20px;
+    margin: 0 2px;
+    @include breakptMax("small") {
+      width: 15px;
+    }
+  }
+
+  li,
+  p,
+  a {
+    font-size: 16px;
+    @include breakptMax("small") {
+      font-size: 12px;
+    }
+    opacity: 0.8;
+    margin: auto 2px;
+    color: var(--text-color);
+  }
+
+  ul,
+  .shareable {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+    @include breakptMin("medium") {
+      width: 50%;
+      margin-bottom: 0;
+    }
+  }
+
+  .shareable {
+    @include breakptMin("medium") {
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+/* Variables */
+
+:root {
+  /* Fonts */
+  --font-family-heading: sans-serif;
+  --font-family-paragraph: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+  --font-family-monospace: monospace;
+
+  /* COLORS */
+  --base-color: {{ .Site.Params.baseColor }};
+  --base-offset-color: {{ .Site.Params.baseOffsetColor }};
+  --highlight-color: {{ .Site.Params.highlightColor }};
+  --heading-color: {{ .Site.Params.headingColor }};
+  --text-color: {{ .Site.Params.textColor }};
+  --dot-color: {{ .Site.Params.dotColor }};
+  --svg-color: invert(7%) sepia(9%) saturate(374%) hue-rotate(227deg) brightness(92%) contrast(91%);
+
+  /* Images */
+  --bg-body: url('/images/bg-light.png')
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark){
+:root {
+	  --base-color: {{ .Site.Params.dark_baseColor  }};
+	  --base-offset-color: {{ .Site.Params.dark_baseOffsetColor }};
+	  --highlight-color: {{ .Site.Params.dark_highlightColor}};
+	  --heading-color: {{ .Site.Params.dark_headingColor }};
+	  --text-color: {{ .Site.Params.dark_textColor }};
+	  --dot-color: {{ .Site.Params.dark_dotColor }};
+	  --svg-color: invert(93%) sepia(73%) saturate(1547%) hue-rotate(178deg) brightness(101%) contrast(91%);
+	  --bg-body: url('/images/bg-dark.png')
+	}
+}
+
+$breakpoints: (
+  'small': 767px,
+  'medium': 992px,
+  'large': 1200px,
+);
+
+/* Tools & Mixins */
+@import './utils/breakpoints';
+@import './utils/animations';
+
+/* Base */
+@import './base/highlight';
+@import './base/normalize';
+@import './base/classes';
+@import './base/hugo-ui';
+
+/* Layout */
+@import './layout/intro';
+@import './layout/lists';
+@import './layout/author';
+@import './layout/footer';
+@import './layout/header';
+@import './layout/content';
+@import './layout/main-menu';
+
+/* UI Components */
+@import './components/toc';
+@import './components/gallery';
+@import './components/summary';
+@import './components/pagination';
+@import './components/card';
+@import './components/shields';
+
+/* Pages */
+@import './pages/resume';
+@import './pages/home';

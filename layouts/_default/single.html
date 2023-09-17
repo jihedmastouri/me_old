@@ -1,0 +1,61 @@
+{{ define "body_classes" }}
+    page-default-single
+{{ end }}
+
+{{ define "main" }}
+<article>
+	<header class="intro">
+		<h1>
+			{{ .Title }}
+            {{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}
+		</h1>
+		<div class="datetime">
+			{{ if ne .Params.date nil }}
+			<span>
+				Date Created:
+				<time datetime="{{ .Params.date }}">
+					{{ .Params.date | time.Format ":date_long" }}</time>
+			</span>
+			{{ if and (ne .Params.lastmod nil) (ne .Params.date .Params.lastmod) }}
+			<span>
+				Date Modified:
+				<time datetime="{{ .Params.lastmod}}">
+					{{ .Params.lastmod | time.Format ":date_long" }}</time>
+			</span>
+			{{ end }} {{ end }}
+		</div>
+		{{ if .Params.image }}
+		<img src="{{ .Params.image | relURL }}" />
+		<div class="meta">
+			<ul id="tags-list">
+				{{ range $name, $taxonomy := .Params.tags }}
+                    <a target="_blank" href='{{ printf "%s/%s" "tags" $taxonomy | relLangURL }}'>
+					<li>#{{$taxonomy}}</li>
+				</a>
+				{{end}}
+			</ul>
+			<div class="shareable">
+				<p>Share this post:</p>
+				<a target="_blank" title="Share to Twitter"
+					href="https://twitter.com/intent/tweet?text={{.Params.title}}&original_referer={{ .Permalink }}&via={{.Site.Params.twitter_handle}}">
+					<img src="/images/social/twitter.svg" aria-hidden="true" />
+				</a>
+				<a target="_blank" title="Share Through Mail"
+					href="mailto:?subject={{.Params.title}}&body={{.Params.description}}  {{.Permalink }}">
+					<img src="/images/social/paper-plane-solid.svg" aria-hidden="true" />
+				</a>
+			</div>
+		</div>
+		{{ end }}
+	</header>
+	<div class="content">
+		{{ if .Params.toc }}
+		<aside>{{ partial "toc.html" . }}</aside>
+		<main>{{ .Content }}</main>
+		{{else}}
+		<main>{{ .Content }}</main>
+		{{ end }}
+	</div>
+</article>
+
+{{ end }}

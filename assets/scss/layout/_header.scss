@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  @include breakptMax("small") {
+    margin-bottom: 30px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  a.header-logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

@@ -1,0 +1,7 @@
+{{ range resources.Match (string .gallery_dir) }}
+		{{ $thumbnail := .Fit "360x360 webp q80 picture" }}
+		{{ $title := index (split (index (split .Name ".") 0) "/") 1 }}
+		<a class="slideInFromBottom" href="{{ .RelPermalink }}" title="{{ $title }}" >
+		  <img class="imgly" src="{{ $thumbnail.RelPermalink }}" alt="{{ $title }}"/>
+		</a>
+{{ end }} 

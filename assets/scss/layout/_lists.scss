@@ -1,0 +1,79 @@
+.skillenton {
+  display: grid;
+  grid-template-columns: 75% 1fr;
+  @include breakptMax("small") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.alltags {
+  margin: 0;
+
+  span {
+    padding: 7px 8px 5px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin: auto 2px;
+    color: var(--highlight-color);
+    background-color: var(--base-offset-color);
+    opacity: 0.8;
+    font-size: 1rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  a {
+    text-decoration: none;
+
+    :hover {
+      animation: swing 1s ease;
+      animation-iteration-count: 1;
+    }
+  }
+}
+
+.allCatg {
+  text-transform: capitalize;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  a {
+
+    padding: 0 5px;
+    margin-top: 5px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+
+    &:hover {
+      background: rgba(75, 150, 225, 0.15);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
+  }
+}
+
+@keyframes swing {
+  10% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

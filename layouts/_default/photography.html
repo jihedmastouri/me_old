@@ -1,0 +1,31 @@
+{{ define "body_classes" }}page-default-single{{ end }}
+
+{{ define "main" }}
+<div class="intro">
+	<h1>
+		{{ .Title }}{{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}
+	</h1>
+</div>
+
+<div class="gallery">
+	<div class="gallery__header">
+		<div class="gallery__info">
+			<h3 style="padding-bottom:0;margin-bottom:0">
+				🧰 Tools: <a href="https://www.darktable.org/"> Darktable </a>
+				, <a href="https://www.gimp.org/"> Gimp </a>
+				, <a href="https://wiki.gnome.org/Apps/Shotwell"> Shotwell </a>
+				& <a href={{ "posts/gnulinux" | relURL}}> GNU/Linux </a>
+			</h3>
+			<h3>
+				🖼️ All content falls under: <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/"> CC BY-NC-SA
+					3.0</a>
+			</h3>
+		</div>
+	</div>
+	<div class="gallery__pics">
+		{{ partial "gallery" (dict "context" . "gallery_dir" "/wall/*") }}
+	</div>
+</div>
+
+
+{{ end }}
